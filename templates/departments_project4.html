@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Departments</title>
+  </head>
+  <body>
+        <table border="1">
+      <thead>
+        <td>Department ID</td>
+        <td>Department Name</td>
+        <td>Department Location ID</td>
+      </thead>
+      {% for row in rows %}
+      <tr>
+        <td>{{row["department_id"]}}</td>
+        <td>{{row["department_name"]}}</td>
+        <td>{{row["location_id"]}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <br />
+    <a href="/home">Go back to home page</a>
+  </body>
+</html>
